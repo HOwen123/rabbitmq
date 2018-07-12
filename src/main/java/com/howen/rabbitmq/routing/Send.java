@@ -18,11 +18,11 @@ public class Send {
 
         channel.exchangeDeclare(Consts.RT_EXCHANGE_NAME,"direct");
 
-        String msg = " message: hello routing to info";
+        String msg = "[send] message: hello routing";
 
         System.out.println(msg);
 
-        String routingKey = Consts.RT_ROUTING_INFO;
+        String routingKey = Consts.RT_ROUTING_ERROR;
 
         channel.basicPublish(Consts.RT_EXCHANGE_NAME,routingKey,null,msg.getBytes());
 

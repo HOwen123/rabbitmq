@@ -19,7 +19,7 @@ public class Recv5 {
         //保证一次只分发一次
         channel.basicQos(1);
 
-        channel.queueBind(Consts.RT_QUEUE_NAME_1,Consts.RT_EXCHANGE_NAME,Consts.RT_ROUTING_ERROR);
+        channel.queueBind(Consts.RT_QUEUE_NAME_1,Consts.RT_EXCHANGE_NAME,"boys.#");
 
         Consumer consumer = new DefaultConsumer(channel){
             @Override

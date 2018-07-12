@@ -23,7 +23,6 @@ public class Recv6 {
         channel.queueBind(Consts.RT_QUEUE_NAME_2,Consts.RT_EXCHANGE_NAME,Consts.RT_ROUTING_INFO);
         channel.queueBind(Consts.RT_QUEUE_NAME_2,Consts.RT_EXCHANGE_NAME,Consts.RT_ROUTING_WARNING);
 
-
         Consumer consumer = new DefaultConsumer(channel){
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
@@ -39,6 +38,6 @@ public class Recv6 {
 
         boolean autoAck = true;
 
-        channel.basicConsume(Consts.RT_QUEUE_NAME_2,autoAck,consumer);
+        channel.basicConsume(Consts.TP_QUEUE_NAME_2,autoAck,consumer);
     }
 }

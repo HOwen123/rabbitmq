@@ -15,6 +15,7 @@ public class Consts {
     public static final String RT_EXCHANGE_NAME = "rout_exchange";
     //路由模式队列
     public static final String RT_QUEUE_NAME_1 = "rout_queue_direct_1";
+
     public static final String RT_QUEUE_NAME_2 = "rout_queue_direct_2";
     //路由key
     public static final String RT_ROUTING_ERROR = "error";
@@ -22,5 +23,15 @@ public class Consts {
     public static final String RT_ROUTING_INFO = "info";
 
     public static final String RT_ROUTING_WARNING = "warning";
+    //topic主题模式
+    public static final String TP_EXCHANGE_NAME = "exchange_topic";
+    //topic队列一
+    public static final String TP_QUEUE_NAME_1 = "queue_tp_1";
+    //topic队列二
+    public static final String TP_QUEUE_NAME_2 = "queue_tp_2";
+
+    public static final String TX_QUEUE_NAME = "queue_tx";
+    //confirm模式
+    public static final String CF_QUEUE_NAME = "queue_cf";
 
 }
